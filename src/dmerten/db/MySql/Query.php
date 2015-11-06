@@ -1,9 +1,9 @@
 <?php
-namespace dmerten\db\MySql;
+namespace dmerten\Db\MySql;
 
-use dmerten\db\Exception\DuplicateKey;
-use dmerten\db\Exception\MySql;
-use dmerten\db\ProfilerInterface;
+use dmerten\Db\Exception\DuplicateKey;
+use dmerten\Db\Exception\MySql;
+use dmerten\Db\ProfilerInterface;
 
 class Query
 {

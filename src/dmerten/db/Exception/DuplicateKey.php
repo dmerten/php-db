@@ -1,5 +1,5 @@
 <?php
-namespace dmerten\db\Exception;
+namespace dmerten\Db\Exception;
 /**
  * Thrown of execute detects a duplicate key exception
  * currently only mysql

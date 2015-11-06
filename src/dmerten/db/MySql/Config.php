@@ -1,5 +1,5 @@
 <?php
-namespace dmerten\db\MySql;
+namespace dmerten\Db\MySql;
 
 class Config
 {

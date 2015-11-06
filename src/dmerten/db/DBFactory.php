@@ -1,10 +1,10 @@
 <?php
-namespace dmerten\db;
+namespace dmerten\Db;
 
-use dmerten\db\Memcache\Config;
-use dmerten\db\Memcache\Memcache;
-use dmerten\db\MySql\MySql;
-use dmerten\db\MySql\ServerConnection;
+use dmerten\Db\Memcache\Config;
+use dmerten\Db\Memcache\Memcache;
+use dmerten\Db\MySql\MySql;
+use dmerten\Db\MySql\ServerConnection;
 
 /**
  * @author Dirk Merten

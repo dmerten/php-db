@@ -1,7 +1,7 @@
 <?php
-namespace dmerten\db\MySql;
+namespace dmerten\Db\MySql;
 
-use dmerten\db\Exception\MySql;
+use dmerten\Db\Exception\MySql;
 
 class ServerConnection
 {

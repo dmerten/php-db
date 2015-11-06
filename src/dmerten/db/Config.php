@@ -1,9 +1,9 @@
 <?php
-namespace dmerten\db;
+namespace dmerten\Db;
 
-use dmerten\db\Memcache\Config as MemCacheConfig;
-use dmerten\db\Memcache\MemcacheServer;
-use dmerten\db\MySql\Config as MySqlConfig;
+use dmerten\Db\Memcache\Config as MemCacheConfig;
+use dmerten\Db\Memcache\MemcacheServer;
+use dmerten\Db\MySql\Config as MySqlConfig;
 
 /**
  * Class Config

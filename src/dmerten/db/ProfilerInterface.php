@@ -1,5 +1,5 @@
 <?php
-namespace dmerten\db;
+namespace dmerten\Db;
 
 /**
  * @author Dirk Merten

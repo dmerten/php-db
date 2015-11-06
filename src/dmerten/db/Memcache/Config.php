@@ -1,5 +1,5 @@
 <?php
-namespace dmerten\db\Memcache;
+namespace dmerten\Db\Memcache;
 
 /**
  *
