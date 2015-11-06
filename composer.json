@@ -1,0 +1,15 @@
+{
+  "name": "PHP DB",
+  "require": {
+    "php": "5.5.*"
+  },
+  "authors": [
+    {
+      "name": "Dirk Merten",
+      "email": "mail@dirk-merten.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {"dmerten\\": "src/dmerten/"}
+  }
+}
