@@ -4,7 +4,7 @@ namespace dmerten\Db;
 /**
  * @author Dirk Merten
  */
-interface ProfilerInterface
+interface Profiler
 {
 	/**
 	 * Marks the beginning of a DatabaseCall

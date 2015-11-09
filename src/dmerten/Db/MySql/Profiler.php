@@ -1,13 +1,13 @@
 <?php
 namespace dmerten\Db\MySql;
 
-use dmerten\Db\ProfilerInterface;
+use dmerten\Db\Profiler;
 
 /**
  *
  * @author Dirk Merten
  */
-class Profiler implements ProfilerInterface
+class Profiler implements Profiler
 {
 	/**
 	 * @var string

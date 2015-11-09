@@ -3,7 +3,7 @@ namespace dmerten\Db\MySql;
 
 use dmerten\Db\Exception\DuplicateKey;
 use dmerten\Db\Exception\MySql;
-use dmerten\Db\ProfilerInterface;
+use dmerten\Db\Profiler;
 
 class Query
 {
@@ -43,7 +43,7 @@ class Query
 	 */
 	protected $binds = array();
 	/**
-	 * @var ProfilerInterface
+	 * @var Profiler
 	 */
 	protected $profiler;
 	/**
@@ -78,10 +78,10 @@ class Query
 	}
 
 	/**
-	 * @param ProfilerInterface $profiler
+	 * @param Profiler $profiler
 	 * @param $profilerDbTypeStr
 	 */
-	public function setProfiler(ProfilerInterface $profiler, $profilerDbTypeStr)
+	public function setProfiler(Profiler $profiler, $profilerDbTypeStr)
 	{
 		$this->profiler = $profiler;
 		$this->profilerDbTypeStr = $profilerDbTypeStr;
