@@ -14,11 +14,11 @@ class DBFactory
 	/**
 	 * @var array
 	 */
-	protected $mysqlServerConnections = array();
+	protected $mysqlServerConnections = [];
 	/**
 	 * @var Mysql[]
 	 */
-	protected $mysqlInstances = array();
+	protected $mysqlInstances = [];
 	/**
 	 * @var \dmerten\db\Config
 	 */
@@ -77,8 +77,7 @@ class DBFactory
 		}
 		$this->mysqlInstances[$name] = new MySql($this->mysqlServerConnections[$serverHash], $config->database);
 		if ($this->profiler) {
-			$profilerDbTypeStr = $config->database;
-			$this->mysqlInstances[$name]->setProfiler($this->profiler, $profilerDbTypeStr);
+			$this->mysqlInstances[$name]->setProfiler($this->profiler, $config->database);
 		}
 		if ($config->readonly) {
 			$this->mysqlInstances[$name]->setReadonly($config->readonly);

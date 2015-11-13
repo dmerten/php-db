@@ -7,7 +7,7 @@ use dmerten\Db\Profiler;
 
 class Query
 {
-	const SLOW_QUERY_TIME_LIMIT = 60000; // limit in ms. default: 3000. 0 to disable
+	const SLOW_QUERY_TIME_LIMIT = 60000; // limit in ms. default: 60000. 0 to disable
 	/**
 	 * SQL Query String
 	 *
@@ -190,7 +190,6 @@ class Query
 	{
 		if (!mb_check_encoding($value, 'UTF-8')) {
 			$value = utf8_encode($value);
-			trigger_error('UTF8: need encoding in MySQL query function bindString()');
 		}
 		return $this->bind($key, $value);
 	}
@@ -253,8 +252,6 @@ class Query
 	}
 
 	/**
-	 * Achtung: Die Rückgabe kann sich von dem tatsächlichen Statment unterscheiden!!!!!!!!!!!
-	 *
 	 * @return string
 	 */
 	public function getSQL()
@@ -268,8 +265,6 @@ class Query
 	}
 
 	/**
-	 * execute the query /oci_execute
-	 *
 	 * @throws MySql
 	 * @throws DuplicateKey
 	 * @throws \Exception
@@ -320,11 +315,7 @@ class Query
 			$this->profiler->onAfterCall();
 		}
 
-		// slow query log
-		if ($this->slowQueryStartTimestamp && (($queryTime = (microtime(true) - $this->slowQueryStartTimestamp) * 1000) >= self::SLOW_QUERY_TIME_LIMIT)) {
-			trigger_error('Slow MySQL query detected (' . (int)$queryTime . 'ms): ' . $this->getSQL(), E_USER_WARNING);
-		}
-
+		$this->isSlowQuery();
 	}
 
 	/**
@@ -524,6 +515,16 @@ class Query
 			$return[] = $row[0];
 		}
 		return $return;
+	}
+
+	/**
+	 * @return void
+	 */
+	protected function isSlowQuery()
+	{
+		if ($this->slowQueryStartTimestamp && (($queryTime = (microtime(true) - $this->slowQueryStartTimestamp) * 1000) >= self::SLOW_QUERY_TIME_LIMIT)) {
+			trigger_error('Slow MySQL query detected (' . (int)$queryTime . 'ms): ' . $this->getSQL(), E_USER_WARNING);
+		}
 	}
 
 }

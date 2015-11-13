@@ -10,37 +10,37 @@ class ServerConnection
 	 *
 	 * @var string
 	 */
-	protected $user;
+	private $user;
 	/**
 	 * Db password
 	 *
 	 * @var string
 	 */
-	protected $pwd;
+	private $pwd;
 	/**
 	 * dsn name or connection String
 	 *
 	 * @var string
 	 */
-	protected $dsn;
+	private $dsn;
 	/**
 	 * Link Ressource
 	 *
 	 * @var \PDO
 	 */
-	protected $pdo = null;
+	private $pdo = null;
 	/**
 	 * Incremented for every "use db" call
 	 *
 	 * @var int
 	 */
-	protected $dbChangedCounter = 0;
+	private $dbChangedCounter = 0;
 	/**
 	 * Last Database Name
 	 *
 	 * @var string
 	 */
-	protected $lastDbName = null;
+	private $lastDbName = null;
 
 	/**
 	 * Construct the Server Connection
@@ -97,7 +97,7 @@ class ServerConnection
 	 *
 	 * @throws MySql
 	 */
-	protected function connect()
+	private function connect()
 	{
 		if ($this->pdo === null) {
 			$pdoOptions = array(

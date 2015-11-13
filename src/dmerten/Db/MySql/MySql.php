@@ -34,15 +34,15 @@ class MySql
 	 *
 	 * @var string
 	 */
-	protected $dbname;
+	protected $dbName;
 
 	/**
 	 * @param ServerConnection $connection
-	 * @param string $dbname
+	 * @param string $dbName
 	 */
-	public function __construct(ServerConnection $connection, $dbname)
+	public function __construct(ServerConnection $connection, $dbName)
 	{
-		$this->dbname = $dbname;
+		$this->dbName = $dbName;
 		$this->connection = $connection;
 	}
 
@@ -61,13 +61,11 @@ class MySql
 	 */
 	public function setReadonly($readonly)
 	{
-		$this->readonly = $readonly;
+		$this->readonly = (bool)$readonly;
 	}
 
 
 	/**
-	 * as replacement for real_escape in old static class mysql
-	 *
 	 * @param string $string
 	 * @return string
 	 */
@@ -82,7 +80,7 @@ class MySql
 	 */
 	protected function getPdo()
 	{
-		return $this->connection->getPdoForDb($this->dbname);
+		return $this->connection->getPdoForDb($this->dbName);
 	}
 
 	/**
@@ -104,8 +102,6 @@ class MySql
 	}
 
 	/**
-	 * true if actually connected, used for unittests
-	 *
 	 * @return bool
 	 */
 	public function isConnected()
