@@ -9,7 +9,7 @@ use dmerten\Db\MySql\ServerConnection;
 /**
  * @author Dirk Merten
  */
-class DBFactory
+class Factory
 {
 	/**
 	 * @var array
