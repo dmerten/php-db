@@ -2,8 +2,7 @@
 namespace dmerten\Db\MySql;
 
 use dmerten\Db\Exception\DuplicateKey;
-use dmerten\Db\Exception\MySql;
-use dmerten\Db\Profiler;
+use dmerten\Db\Exception\MySql as c;
 
 class Query
 {
@@ -297,7 +296,7 @@ class Query
 					throw new DuplicateKey("Duplicate Key " . $ex, null, null, $ex);
 				}
 			}
-			throw new MySql("Query failed " . $ex, null, null, $ex);
+			throw new MySqlException("Query failed " . $ex, null, null, $ex);
 		}
 	}
 
