@@ -4,7 +4,7 @@
  *
  * @author Dirk Merten
  */
-class Vwd_DB_Mysql_QueryTest extends PHPUnit_Framework_TestCase {
+class QueryTest extends PHPUnit_Framework_TestCase {
 
 	public function testGetSQL() {
 		$query = new \dmerten\Db\MySql\Query(new PDOMock(), 'SELECT 1 FROM dual');
