@@ -56,7 +56,7 @@ class PDOMock extends \PDO {
 	 * @param null $paramtype
 	 * @return string
 	 */
-	public function quote($param, $paramtype = NULL) {
+	public function quote($param, $paramtype = null) {
 		return $param;
 	}
 }

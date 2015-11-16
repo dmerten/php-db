@@ -1,9 +1,9 @@
 <?php
-/** 
+
+/**
  *
  * @author Dirk Merten
  */
-
 class Vwd_DB_Mysql_ProfilerTest extends PHPUnit_Framework_TestCase {
 
 	public function testGetLogs() {

@@ -1,11 +1,9 @@
 <?php
-use dmerten\Db\Mysql\Mysql;
 
-/** 
+/**
  *
  * @author Dirk Merten
  */
-
 class Vwd_DB_Mysql_MysqlTest extends PHPUnit_Framework_TestCase {
 
 	public function testParseDate() {

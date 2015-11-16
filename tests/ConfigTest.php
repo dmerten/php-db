@@ -1,9 +1,9 @@
 <?php
+
 /**
  *
  * @author Dirk Merten
  */
-
 class Vwd_DB_ConfigTest extends PHPUnit_Framework_TestCase {
 
 	public function testgetMySqlConfigs() {

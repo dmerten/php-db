@@ -3,11 +3,10 @@ use dmerten\Db\Memcache\Memcache;
 use dmerten\Db\Memcache\MemcacheServer;
 use dmerten\Db\Mysql\Profiler;
 
-/** 
+/**
  *
  * @author Dirk Merten
  */
-
 class Vwd_DB_Memcache_MemcacheTest extends PHPUnit_Framework_TestCase {
 
 	public function testGet() {
