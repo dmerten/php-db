@@ -2,7 +2,7 @@
 namespace dmerten\Db\MySql;
 
 use dmerten\Db\Exception\DuplicateKey;
-use dmerten\Db\Exception\MySql as c;
+use dmerten\Db\Exception\MySql as MySqlException;
 
 class Query
 {
