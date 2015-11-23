@@ -18,7 +18,7 @@ class Db extends \Exception
 			$message .= json_encode($error);
 		}
 
-		parent::__construct($message, $code);
+		parent::__construct($message, $code, $previous);
 	}
 
 }

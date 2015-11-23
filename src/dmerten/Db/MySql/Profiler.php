@@ -29,8 +29,8 @@ class Profiler implements ProfilerInterface
 	/**
 	 * Marks the beginning of a DatabaseCall
 	 *
-	 * @param string $typString e.g. my, ora, myM, ...
-	 * @param string $sql actual callstring
+	 * @param string $typString
+	 * @param string $sql
 	 */
 	public function onBeforeCall($typString, $sql)
 	{
@@ -46,7 +46,7 @@ class Profiler implements ProfilerInterface
 	{
 		$this->logs[] = array(
 			'database' => $this->typeString,
-			'runtime' => (round((microtime(true) - $this->startTimestamp) * 1000, 2)) . " ms",
+			'runtime' => (round((microtime(true) - $this->startTimestamp) * 1000, 2)),
 			'query' => $this->currentQuery
 		);
 	}

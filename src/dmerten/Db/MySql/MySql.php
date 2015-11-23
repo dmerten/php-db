@@ -19,13 +19,11 @@ class MySql
 	 */
 	protected $profilerDbTypeStr;
 	/**
-	 * connection broker for server
 	 *
 	 * @var ServerConnection
 	 */
 	protected $connection = null;
 	/**
-	 * Readonly Flag, prohibits update/insert ... query exec
 	 *
 	 * @var bool
 	 */

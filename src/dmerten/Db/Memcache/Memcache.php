@@ -112,7 +112,7 @@ class Memcache
 	/**
 	 * @param Profiler $profiler
 	 */
-	public function setProfiler($profiler)
+	public function setProfiler(Profiler $profiler)
 	{
 		$this->profiler = $profiler;
 	}
