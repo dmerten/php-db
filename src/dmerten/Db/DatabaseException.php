@@ -1,5 +1,5 @@
 <?php
-namespace dmerten\Db\Exception;
+namespace dmerten\Db;
 /**
  * @author Dirk Merten
  */
