@@ -1,7 +1,6 @@
 <?php
 namespace dmerten\Db\MySql;
-
-use dmerten\Db\Profiler as ProfilerInterface;
+use dmerten\Db\ProfilerInterface;
 
 /**
  *

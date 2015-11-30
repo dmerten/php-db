@@ -1,7 +1,7 @@
 <?php
 namespace dmerten\Db\MySql;
 
-use dmerten\Db\Profiler;
+use dmerten\Db\ProfilerInterface;
 
 /**
  * Class MySql
@@ -11,7 +11,7 @@ use dmerten\Db\Profiler;
 class MySql
 {
 	/**
-	 * @var Profiler
+	 * @var ProfilerInterface
 	 */
 	protected $profiler;
 	/**
@@ -45,10 +45,10 @@ class MySql
 	}
 
 	/**
-	 * @param Profiler $profiler
+	 * @param ProfilerInterface $profiler
 	 * @param string
 	 */
-	public function setProfiler(Profiler $profiler, $profilerDbTypeStr)
+	public function setProfiler(ProfilerInterface $profiler, $profilerDbTypeStr)
 	{
 		$this->profiler = $profiler;
 		$this->profilerDbTypeStr = $profilerDbTypeStr;

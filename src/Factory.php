@@ -24,7 +24,7 @@ class Factory
 	 */
 	protected $config;
 	/**
-	 * @var Profiler
+	 * @var ProfilerInterface
 	 */
 	protected $profiler;
 	/**
@@ -45,9 +45,9 @@ class Factory
 	}
 
 	/**
-	 * @param Profiler $profiler
+	 * @param ProfilerInterface $profiler
 	 */
-	public function setProfiler(Profiler $profiler)
+	public function setProfiler(ProfilerInterface $profiler)
 	{
 		$this->profiler = $profiler;
 	}

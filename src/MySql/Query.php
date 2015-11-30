@@ -42,7 +42,7 @@ class Query
 	 */
 	protected $binds = array();
 	/**
-	 * @var Profiler
+	 * @var ProfilerInterface
 	 */
 	protected $profiler;
 	/**
@@ -77,10 +77,10 @@ class Query
 	}
 
 	/**
-	 * @param Profiler $profiler
+	 * @param ProfilerInterface $profiler
 	 * @param $profilerDbTypeStr
 	 */
-	public function setProfiler(Profiler $profiler, $profilerDbTypeStr)
+	public function setProfiler(ProfilerInterface $profiler, $profilerDbTypeStr)
 	{
 		$this->profiler = $profiler;
 		$this->profilerDbTypeStr = $profilerDbTypeStr;

@@ -4,10 +4,12 @@
  *
  * @author Dirk Merten
  */
-class ProfilerTest extends PHPUnit_Framework_TestCase {
+class ProfilerTest extends PHPUnit_Framework_TestCase
+{
 
-	public function testGetLogs() {
-		$profiler = new \dmerten\Db\Mysql\Profiler();
+	public function testGetLogs()
+	{
+		$profiler = new \dmerten\Db\MySql\Profiler();
 		$query = 'SELECT 1 FROM dual';
 		$database = 'mysql_database';
 		$profiler->onBeforeCall($database, $query);

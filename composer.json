@@ -10,8 +10,8 @@
 	}
   ],
   "autoload": {
-	"classmap": [
-	  "src/"
-	]
+	"psr-4": {
+	  "dmerten\\Db\\": "src/"
+	}
   }
 }

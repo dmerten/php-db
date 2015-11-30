@@ -1,7 +1,7 @@
 <?php
 namespace dmerten\Db\Memcache;
 
-use dmerten\Db\Profiler;
+use dmerten\Db\ProfilerInterface;
 
 /**
  *
@@ -11,7 +11,7 @@ class Memcache
 {
 	const DEFAULT_TTL = 300;
 	/**
-	 * @var Profiler
+	 * @var ProfilerInterface
 	 */
 	private $profiler;
 	/**
@@ -110,9 +110,9 @@ class Memcache
 	}
 
 	/**
-	 * @param Profiler $profiler
+	 * @param ProfilerInterface $profiler
 	 */
-	public function setProfiler(Profiler $profiler)
+	public function setProfiler(ProfilerInterface $profiler)
 	{
 		$this->profiler = $profiler;
 	}
