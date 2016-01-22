@@ -101,7 +101,7 @@ class ServerConnection
 	{
 		if ($this->pdo === null) {
 			$pdoOptions = array(
-				\PDO::ATTR_PERSISTENT => !true,
+				\PDO::ATTR_PERSISTENT => true,
 				\PDO::ATTR_ERRMODE => \PDO::ERRMODE_EXCEPTION,
 				\PDO::ATTR_PREFETCH => 1000,
 				\PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'
