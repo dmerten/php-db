@@ -1,7 +1,7 @@
 <?php
 namespace dmerten\Db\MySql;
 
-use dmerten\Db\Exception\MySql;
+use dmerten\Db\Exception\MySqlException;
 
 class ServerConnection
 {
@@ -72,7 +72,7 @@ class ServerConnection
 	 *
 	 * @param string $dbname
 	 * @return \PDO
-	 * @throws MySql
+	 * @throws MySqlException
 	 */
 	public function getPdoForDb($dbname)
 	{
@@ -86,7 +86,7 @@ class ServerConnection
 				$this->lastDbName = $dbname;
 			} catch (\PDOException $ex) {
 				$this->lastDbName = null;
-				throw new MySql("Use Database '{$dbname}' failed", null, null, $ex);
+				throw new MySqlException("Use Database '{$dbname}' failed", null, null, $ex);
 			}
 		}
 		return $this->pdo;
@@ -95,7 +95,7 @@ class ServerConnection
 	/**
 	 * connect to database, or do nothing if already connected
 	 *
-	 * @throws MySql
+	 * @throws MySqlException
 	 */
 	private function connect()
 	{
@@ -110,7 +110,7 @@ class ServerConnection
 			try {
 				$this->pdo = new \PDO($this->dsn, $this->user, $this->pwd, $pdoOptions);
 			} catch (\PDOException $ex) {
-				throw new MySql("Connect to '{$this->dsn}' with user '{$this->user}' failed", null, null, $ex);
+				throw new MySqlException("Connect to '{$this->dsn}' with user '{$this->user}' failed", null, null, $ex);
 			}
 		}
 	}

@@ -2,7 +2,8 @@
 namespace dmerten\Db\MySql;
 
 use dmerten\Db\Exception\DuplicateKey;
-use dmerten\Db\Exception\MySql as MySqlException;
+use dmerten\Db\Exception\MySqlException as MySqlException;
+use dmerten\Db\ProfilerInterface;
 
 class Query
 {
@@ -65,7 +66,6 @@ class Query
 	protected $arrayCounter = 0;
 
 	/**
-	 * constructor +executes oci_parse
 	 *
 	 * @param \PDO|resource $connection
 	 * @param string $sql

@@ -3,7 +3,7 @@ namespace dmerten\Db;
 /**
  * @author Dirk Merten
  */
-class Db extends \Exception
+class DatabaseException extends \Exception
 {
 
 	/**

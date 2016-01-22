@@ -1,10 +1,11 @@
 <?php
 namespace dmerten\Db\Exception;
+use dmerten\Db\DatabaseException;
 
 /**
  * @author Dirk Merten
  */
-class MySql extends Db
+class MySqlException extends DatabaseException
 {
 
 }
