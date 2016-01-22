@@ -2,4 +2,4 @@
 PHP oop db class
 
 ## Usage
-//TODO
+See example.php

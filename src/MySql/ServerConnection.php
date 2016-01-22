@@ -80,9 +80,7 @@ class ServerConnection
 		if ($this->lastDbName === null || $this->lastDbName != $dbname) {
 			try {
 				$this->pdo->exec("use `$dbname`");
-				// @codeCoverageIgnoreStart
 				$this->dbChangedCounter++;
-				// @codeCoverageIgnoreEnd
 				$this->lastDbName = $dbname;
 			} catch (\PDOException $ex) {
 				$this->lastDbName = null;
