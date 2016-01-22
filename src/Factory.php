@@ -1,7 +1,6 @@
 <?php
 namespace dmerten\Db;
 
-use dmerten\Db\Memcache\Config as MemcacheConfig;
 use dmerten\Db\Memcache\Memcache;
 use dmerten\Db\MySql\MySql;
 use dmerten\Db\MySql\ServerConnection;
