@@ -1,5 +1,5 @@
 {
-  "name": "PHP DB",
+  "name": "dmerten/php-db",
   "require": {
 	"php": "5.5.*"
   },
