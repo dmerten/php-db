@@ -1,7 +1,7 @@
 {
   "name": "dmerten/php-db",
   "require": {
-	"php": ">=5.5.*"
+	"php": ">=5.5"
   },
   "authors": [
 	{
